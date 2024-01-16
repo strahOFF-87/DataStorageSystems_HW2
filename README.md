@@ -89,15 +89,8 @@ ConfigMap: Хранит конфигурационные данные для с�
 Сервер: messaging.example.com
 Системные требования: 1 CPU, 4GB RAM, 20GB дисковое пространство
 
-Диаграмма системы:
+## Диаграмма системы:
 
-                [External Services]
-                   /     |     \
-                  /      |      \
-                 /       |       \
- [DB Service]--[REST Auth Service]--[REST Schedule Service]--[Message Queue]
-       |                                                           |
-       v                                                           |
-[API Service] ----[Data Processing Service] ---- [Web Interface for Reservation]
+![system_diagram_](https://github.com/strahOFF-87/DataStorageSystems_HW2/assets/147749583/b16a9a10-496c-4950-9a94-a1c765ef26ee)
 
 
