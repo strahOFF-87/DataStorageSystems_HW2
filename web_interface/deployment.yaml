@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-interface
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-interface
+  template:
+    metadata:
+      labels:
+        app: web-interface
+    spec:
+      containers:
+      - name: web-interface
+        image: web-interface:v1
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "100m"
