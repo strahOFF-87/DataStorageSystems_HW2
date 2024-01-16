@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: processing-service-cronjob
+spec:
+  schedule: "0 * * * *"  # Запуск каждый час
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: processing-service
+              image: processing-service:v1
+              command: ["/bin/sh", "-c"]
+              args: [" "]
+          restartPolicy: OnFailure
