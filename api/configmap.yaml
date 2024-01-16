@@ -3,3 +3,4 @@ kind: ConfigMap
 metadata:
   name: api-service-config
 data:
+# написать мои конфигурация
