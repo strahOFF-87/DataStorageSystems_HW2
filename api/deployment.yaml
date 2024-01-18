@@ -17,6 +17,11 @@ spec:
           image: api-service:v1
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: api-service-config  # Наименование моего ConfigMap
+            - secretRef:
+                name: api-service-secret  # Наименование моего Secret
           resources:
             requests:
               memory: "100Mi"
