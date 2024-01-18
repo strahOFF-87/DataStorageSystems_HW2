@@ -29,3 +29,29 @@ spec:
             limits:
               memory: "500Mi"
               cpu: "500m"
+
+
+# Пример:
+          envFrom:
+            - name: DATABASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: api-service-config
+                  key: DATABASE_URL
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: api-service-config
+                  key: DB_HOST
+            # Добавляем другие переменные из ConfigMap'а
+            - name: OTHER_CONFIG
+              valueFrom:
+                configMapKeyRef:
+                  name: api-service-config
+                  key: OTHER_CONFIG
+            # Пример использования переменных из секрета
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: api-service-secret
+                  key: secret-key
