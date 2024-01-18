@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: api-service-config
 data:
-# написать мои конфигурация, например:
+# написать мои конфигурации, например:
   RESERVATION_DATABASE_URL: "http://reservation-database.url"
   RESERVATION_DB_HOST: "base64_encoded_reservation_host"
   RESERVATION_DB_USER: "base64_encoded_reservation_user"
