@@ -17,6 +17,9 @@ spec:
           image: processing-service:v1
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: processing-service-config  # мой ConfigMap
           resources:
             requests:
               memory: "150Mi"
