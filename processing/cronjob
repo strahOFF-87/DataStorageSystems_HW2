@@ -11,6 +11,9 @@ spec:
           containers:
             - name: processing-service
               image: processing-service:v1
+              envFrom:
+                - configMapRef:
+                    name: processing-service-config  # Наименование илего ConfigMap
               command: ["/bin/sh", "-c"]
               args: [" "]
           restartPolicy: OnFailure
