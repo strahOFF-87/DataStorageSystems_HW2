@@ -17,6 +17,9 @@ spec:
           image: web-interface:v1
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: web-interface-config  # Наименование моего ConfigMap
           resources:
             requests:
               memory: "100Mi"
