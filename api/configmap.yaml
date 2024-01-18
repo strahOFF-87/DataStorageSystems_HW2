@@ -11,3 +11,8 @@ data:
   RESERVATION_AUTH_SERVICE_URL: "http://auth-service.reservation-example.com:8000"
   RESERVATION_INVENTORY_SERVICE_URL: "http://inventory-service.reservation-example.com:8080"
   RESERVATION_MESSAGE_QUEUE_URL: "amqp://reservation-messaging.example.com:5672"
+
+# Пример:
+  DATABASE_URL: "http://database.url"
+  DB_HOST: "base64_encoded_host"
+  OTHER_CONFIG: "some_value"
